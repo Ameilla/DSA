@@ -130,7 +130,7 @@ public class  LinkedList{
 		System.out.println(List.DeleteFirst());
 		System.out.println(List.DeleteLast());
 		System.out.println(List.DeleteAtPostion(2));
-		List.Display();
+//		List.Display();
 		
 	}	
 }
