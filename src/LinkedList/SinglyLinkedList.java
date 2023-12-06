@@ -1,6 +1,6 @@
-package DSA;
+package LinkedList;
 
-public class  LinkedList{
+public class  SinglyLinkedList{
 	
 	public class LL
 	{
@@ -122,7 +122,7 @@ public class  LinkedList{
 	}
 	public static void main(String[] args)
 	{
-		LinkedList List =new LinkedList();
+		SinglyLinkedList List =new SinglyLinkedList();
 		List.InserAtBegin(12);
 		List.InserAtBegin(20);
 		List.InsertAtEnd(25);
