@@ -31,6 +31,9 @@ public class Search {
 		List.InsertNodeInSortedList(25);
 		List.Display();
 		
+		List.delete(10);
+		List.Display();
+		
 
 		
 		

@@ -118,6 +118,7 @@ public class  SinglyLinkedList{
 			temp=temp.next;
 		}
 		System.out.print("null");
+		System.out.println();
 	}
 	
 	
@@ -248,6 +249,26 @@ public class  SinglyLinkedList{
 		}
 		newnode.next = current;
 		temp.next=newnode;
+	}
+	
+	public void delete(int value)
+	{
+		LL current=head;
+		LL temp=null;
+		if(current!=null && current.data==value)
+		{
+			head = current.next;
+			return;
+		}
+		while(current!=null && current.data!=value)
+		{
+			temp=current;
+			current=current.next;
+		}
+		if(current==null)
+			return;
+		temp.next=current.next;
+		
 	}
 	public static void main(String[] args)
 	{
