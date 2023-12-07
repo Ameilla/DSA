@@ -218,7 +218,37 @@ public class  SinglyLinkedList{
 		}
 		
 	}
+	public void RemoveDuplicatesFromSortedList()
+	{
+		if(head==null)
+			return;
+		LL current = head;
+		while(current!=null && current.next!=null)
+		{
+			if(current.data==current.next.data)
+			{
+				current.next= current.next.next;
+			}
+			else
+			{
+				current=current.next;
+			}
+		}
+	}
 	
+	public void InsertNodeInSortedList(int value)
+	{
+		LL newnode = new LL(value);
+		LL temp=null;
+		LL current = head;
+		while(current!=null && current.data<value)
+		{
+			temp=current;
+			current=current.next;
+		}
+		newnode.next = current;
+		temp.next=newnode;
+	}
 	public static void main(String[] args)
 	{
 		SinglyLinkedList List =new SinglyLinkedList();

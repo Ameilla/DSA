@@ -8,13 +8,14 @@ public class Search {
 	public static void main(String[] args)
 	{
 		SinglyLinkedList List =new SinglyLinkedList();
-		List.InserAtBegin(10);
-		List.InserAtBegin(20);
+		List.InserAtBegin(36);
 		List.InserAtBegin(30);
-		List.InserAtBegin(2);
-		List.InserAtBegin(22);
-		List.InserAtBegin(36);
-		List.InserAtBegin(36);
+		List.InserAtBegin(20);
+		List.InserAtBegin(20);
+		List.InserAtBegin(20);
+		List.InserAtBegin(10);
+		List.InserAtBegin(10);
+		
 		List.Display();
 		System.out.println();
 		List.reverse();
@@ -25,6 +26,10 @@ public class Search {
 		List.Display();
 		System.out.println();
 		List.sort();
+		System.out.println();
+//		List.RemoveDuplicatesFromSortedList();
+		List.InsertNodeInSortedList(25);
+		List.Display();
 		
 
 		
