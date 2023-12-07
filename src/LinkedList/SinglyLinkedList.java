@@ -1,8 +1,7 @@
 package LinkedList;
 
 public class  SinglyLinkedList{
-	
-	public class LL
+	class LL
 	{
 		int data;
 		LL next;
@@ -12,7 +11,7 @@ public class  SinglyLinkedList{
 			this.next=null;
 		}
 	}
-	public LL head;
+	LL head;
 	
 	public void InserAtBegin(int data)
 	{
@@ -120,6 +119,106 @@ public class  SinglyLinkedList{
 		}
 		System.out.print("null");
 	}
+	
+	
+	
+	public boolean search(int SearchData)
+	{
+		if(head==null)
+			return false;
+		LL temp=head;
+		while(temp!=null)
+		{
+			if(temp.data== SearchData)
+			{
+				return true;
+			}
+			temp = temp.next;
+		}
+		return false;
+	}
+	
+	public void reverse()
+	{
+		LL current = head;
+		LL previous =null;
+		LL next =null;
+		while(current!=null)
+		{
+			next=current.next;
+			current.next = previous;
+			previous = current;
+			current = next;
+		}
+		head=previous;
+	}
+	public LL GetMid()
+	{
+		if(head==null)
+			return null;
+		LL slow=head;
+		LL fast=head;
+		while(fast!=null && fast.next!=null)
+		{
+			slow=slow.next;
+			fast=fast.next.next;
+		}
+		return slow;
+	}
+	
+	public int GetNthNode(int n)
+	{
+		if(n<=0)
+			return -1;
+		LL temp = head;
+		int count=1;
+		while(count<n && temp!=null)
+		{
+			temp=temp.next;
+			count++;
+		}
+		if(temp==null)
+			return -1;
+		return temp.data;
+	}
+	
+	public void sort()
+	{
+		int c=0;
+		if(head!=null)
+		{
+			LL temp=head;
+			while(temp!=null)
+			{
+				temp=temp.next;
+				c++;
+			}
+		}
+		for(int i=0;i<c;i++)
+		{
+			LL temp=head;
+			LL temp1=temp.next;
+			for(int j=0;j<c-i-1;j++)
+			{
+				if(temp.data>temp1.data)
+				{
+					int t=temp.data;
+					temp.data=temp1.data;
+					temp1.data=t;
+				}
+				temp = temp1;
+				temp1=temp1.next;
+			}
+		}
+		LL temp=head;
+		while(temp!=null)
+		{
+			System.out.print(temp.data+"->");
+			temp=temp.next;
+		}
+		
+	}
+	
 	public static void main(String[] args)
 	{
 		SinglyLinkedList List =new SinglyLinkedList();
