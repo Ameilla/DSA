@@ -270,17 +270,74 @@ public class  SinglyLinkedList{
 		temp.next=current.next;
 		
 	}
+	
+	public boolean ContainsLoop()
+	{
+		LL slow=head;
+		LL fast=head;
+		while(fast!=null && fast.next!=null)
+		{
+			slow=slow.next;
+			fast=fast.next.next;
+			if(slow==fast)
+				return  true;
+		}
+		return  false;
+	}
+	
+	public LL MergeList(LL a,LL b)
+	{
+		LL temp=new LL(0);
+		LL tail=temp;
+		while(a!=null && b!=null)
+		{
+			if(a.data<=b.data)
+			{
+				tail.next=a;
+				a=a.next;
+			}
+			else
+			{
+				tail.next=b;
+				b=b.next;
+			}
+			tail=tail.next;
+		}
+		if(a==null)
+			tail.next=b;
+		else
+			tail.next=a;
+		return temp.next;
+		
+	}
 	public static void main(String[] args)
 	{
-		SinglyLinkedList List =new SinglyLinkedList();
-		List.InserAtBegin(12);
-		List.InserAtBegin(20);
-		List.InsertAtEnd(25);
-		List.InsertAtPosition(500,4);
-		System.out.println(List.DeleteFirst());
-		System.out.println(List.DeleteLast());
-		System.out.println(List.DeleteAtPostion(2));
+//		SinglyLinkedList List =new SinglyLinkedList();
+//		List.InserAtBegin(12);
+//		List.InserAtBegin(20);
+//		List.InsertAtEnd(25);
+//		List.InsertAtPosition(500,4);
+//		System.out.println(List.DeleteFirst());
+//		System.out.println(List.DeleteLast());
+//		System.out.println(List.DeleteAtPostion(2));
 //		List.Display();
+		
+		SinglyLinkedList List1 =new SinglyLinkedList();
+		List1.InserAtBegin(20);
+		List1.InserAtBegin(15);
+		List1.InserAtBegin(10);
+		List1.InserAtBegin(2);
+		List1.Display();
+		SinglyLinkedList List2 =new SinglyLinkedList();
+		List2.InserAtBegin(17);
+		List2.InserAtBegin(15);
+		List2.InserAtBegin(10);
+		List2.InserAtBegin(3);
+		List2.Display();
+		
+		SinglyLinkedList result =new SinglyLinkedList();
+		result.head=result.MergeList(List1.head,List2.head);
+		result.Display();
 		
 	}	
 }
