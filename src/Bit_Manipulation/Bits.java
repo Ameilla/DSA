@@ -44,9 +44,13 @@ public class Bits {
 		}
 		return count;
 	}
+	static int SwapEvenOddBits(int n)
+	{
+		return ((n & 0xaaaaaaaa)>>>1 | (n & 0x55555555)<<1);
+	}
 	public static void main(String[] args)
 	{
-		System.out.print(CountConsecutiveOnes(15));
+		System.out.print(SwapEvenOddBits(181));
 	}
 		
 
