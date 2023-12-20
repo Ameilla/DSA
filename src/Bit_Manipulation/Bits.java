@@ -34,9 +34,19 @@ public class Bits {
 		return (n&(n-1))==0;
 		
 	}
+	static int CountConsecutiveOnes(int n)
+	{
+		int count=0;
+		while(n>0)
+		{
+			n = n & (n<<1);
+			count++;
+		}
+		return count;
+	}
 	public static void main(String[] args)
 	{
-		System.out.print(PowerOf2(0));
+		System.out.print(CountConsecutiveOnes(15));
 	}
 		
 
