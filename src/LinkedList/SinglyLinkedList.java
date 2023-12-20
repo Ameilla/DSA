@@ -333,11 +333,12 @@ public class  SinglyLinkedList{
 		List2.InserAtBegin(15);
 		List2.InserAtBegin(10);
 		List2.InserAtBegin(3);
+		List2.InsertAtEnd(25);
 		List2.Display();
-		
-		SinglyLinkedList result =new SinglyLinkedList();
-		result.head=result.MergeList(List1.head,List2.head);
-		result.Display();
+//		
+//		SinglyLinkedList result =new SinglyLinkedList();
+//		result.head=result.MergeList(List1.head,List2.head);
+//		result.Display();
 		
 	}	
 }
