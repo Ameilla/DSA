@@ -18,6 +18,13 @@ public class Reverse_a_word_in_a_String {
 			words[i]=empty;
 		}
 		System.out.print(Arrays.toString(words));
+		String result="";
+		for(String i : words)
+		{
+			result=result+i+" ";
+		}
+		result=result.trim();
+		System.out.print(result);
+		
 	}
-
 }
