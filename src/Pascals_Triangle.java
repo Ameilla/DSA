@@ -48,15 +48,27 @@ public class Pascals_Triangle {
 	        }
 	        return ans;
 	    }
+	 public static long nCr(int n,int r)
+	 {
+		 long ans=1;
+		 for(int i=0;i<r;i++)
+		 {
+			 ans=ans*(n-i);
+			 ans=ans/(i+1);
+			 System.out.print(ans);
+		 }
+		 
+		 return ans;
+	 }
 	public static void main(String[] args)
 	{
 		List<List<Integer>> ans = pascal(5);
         for (List<Integer> row : ans) {
             System.out.println(row);
         }
+        System.out.print("\n"+""+nCr(5,2));
         
-        
-		 int[][] result = pascal1(5);
+		int[][] result = pascal1(5);
         for (int i = 0; i < result.length; i++) {
             System.out.println(Arrays.toString(result[i]));
         }
