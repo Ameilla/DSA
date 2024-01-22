@@ -18,20 +18,29 @@ public class Set_Matrix_Zeros {
 				}
 			}
 		}
-		for(int r:row)
+		for(int i=0;i<a.length;i++)
 		{
 			for(int j=0;j<a[0].length;j++)
 			{
-				a[r][j]=0;
+				if(row.contains(i)||col.contains(j))
+					a[i][j]=0;
+					
 			}
 		}
-		for(int c:col)
-		{
-			for(int i=0;i<a.length;i++)
-			{
-				a[i][c]=0;
-			}
-		}
+//		for(int r:row)
+//		{
+//			for(int j=0;j<a[0].length;j++)
+//			{
+//				a[r][j]=0;
+//			}
+//		}
+//		for(int c:col)
+//		{
+//			for(int i=0;i<a.length;i++)
+//			{
+//				a[i][c]=0;
+//			}
+//		}
 		return a;
 	}
 	
@@ -105,7 +114,7 @@ public class Set_Matrix_Zeros {
 	public static void main(String[] args)
 	{
 		int a[][]= {{0,2,3,1},{1,1,1,1},{1,1,1,1},{1,1,1,1}};
-		int[][] result = three(a);
+		int[][] result = one(a);
 		for(int i=0;i<result.length;i++)
 		{
 			System.out.println(Arrays.toString(result[i]));
