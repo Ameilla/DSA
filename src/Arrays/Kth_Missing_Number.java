@@ -25,7 +25,7 @@ public class Kth_Missing_Number {
 		return k+high+1;
 	}
 	public static void main(String[] args) {
-		int a[]= {4,7,9,22};
-		System.out.print(miss_Binary(a,4));
+		int a[]= {1,3,5,7};
+		System.out.print(miss_linear(a,7));
 	}
 }
