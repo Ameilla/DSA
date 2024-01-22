@@ -24,9 +24,7 @@ public class Pascals_Triangle {
 			result.add(row);
 		}
 		
-		return result;
-		
-		
+		return result;			
 	}
 	 public static int[][] pascal1(int N) {
 	        int ans[][] = new int[N][];
@@ -57,7 +55,6 @@ public class Pascals_Triangle {
 			 ans=ans/(i+1);
 			 System.out.print(ans);
 		 }
-		 
 		 return ans;
 	 }
 	public static void main(String[] args)
