@@ -18,8 +18,7 @@ public class ATOI {
             }
         }
         if (t.isEmpty()) {
-            System.out.println("No valid integer found in the input string.");
-            return 0; // or handle the error in some way
+            return 0; 
         }
         int x = Integer.parseInt(t);
         return x;
