@@ -8,6 +8,8 @@ public class Rotate_Image {
 		int n=a.length;
 		for(int i=0;i<n;i++)
 			System.out.println(Arrays.toString(a[i]));
+		
+		//transpose 
 		for(int i=0;i<n;i++)
 		{
 			for(int j=i;j<n;j++)
@@ -20,7 +22,7 @@ public class Rotate_Image {
 		for(int i=0;i<n;i++)
 			System.out.println(Arrays.toString(a[i]));
 		
-		
+		//rotate row
 		for(int i=0;i<n;i++)
 		{
 			for(int j=0;j<n/2;j++)
