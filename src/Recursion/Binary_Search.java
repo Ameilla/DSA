@@ -17,7 +17,7 @@ public class Binary_Search {
 	{
 		int a[]= {1,2,3,5,7,20,25};
 		int key = 25;
-		int i = search(a,key,0,a.length);
+		int i = search(a,key,0,a.length-1);
 		System.out.print(i);
 	}
 }
