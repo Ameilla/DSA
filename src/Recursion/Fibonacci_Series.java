@@ -22,6 +22,7 @@ public class Fibonacci_Series {
 		ArrayList<Integer> t = new ArrayList<>();
 		for(int i=0;i<n;i++)
 			t.add(fib(i));
+		System.out.print(t);
 	}
 
 }
