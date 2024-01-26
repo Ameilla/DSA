@@ -9,6 +9,8 @@ public class Prime_Numbers {
 		}
 		return true;
 	}
+	//time COmplexity
+	//O[sqrt(n)(log(log(n))]
 	public static HashSet<Integer> seiveprime(int n)
 	{
 		HashSet<Integer> prime = new HashSet<>();
