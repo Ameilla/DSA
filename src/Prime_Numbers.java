@@ -12,12 +12,11 @@ public class Prime_Numbers {
 	public static HashSet<Integer> seiveprime(int n)
 	{
 		HashSet<Integer> prime = new HashSet<>();
-		
-		for(int i=2;i<=n;i++)
+		for(int i=2;i*i<=n;i++)
 		{
 			if(isprime(i))
 			{
-				for(int j=i*2;j<=n;j=j+i)
+				for(int j=i*i;j<=n;j=j+i)
 				{
 					prime.add(j);
 				}
@@ -42,5 +41,4 @@ public class Prime_Numbers {
 			System.out.print("\n"+Integer);
 		
 	}
-
 }
