@@ -27,14 +27,18 @@ public class practice {
 			return;
 		int rem=n%10;
 		rev=rev*10+rem;
-		reverse(n/10);
-		
+		reverse(n/10);	
+	}
+	public static boolean sorted(int a[],int index)
+	{
+		if(index == a.length-1)
+			return true;
+		return a[index]<a[index+1] && sorted(a,index+1);
 	}
 	public static void main(String[] args)
 	{
-		int n=1234;
-		reverse(n);
-		System.out.print(rev);
+		int a[] = {1,2,3,4,6,5};
+		System.out.print(sorted(a,0));
 	}
 
 }
