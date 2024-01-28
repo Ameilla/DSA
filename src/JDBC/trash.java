@@ -52,6 +52,7 @@ public class trash {
 		public void createData()
 		{
 			try {
+				int x=input.nextInt();
 				String url = "jdbc:mysql://localhost:3306/";
 				String db = "Amari";
 				String userName = "root";
@@ -60,11 +61,16 @@ public class trash {
 //				Class.forName("com.mysql.cj.jdbc.Driver");
 				Connection conn = DriverManager.getConnection(url+db,userName,password);
 				Statement st = conn.createStatement();
-				int x=input.nextInt();
+//				String query = "Insert into Amar (rollno) values(10)";
+				
+				String query = "Insert into Amar(rollno) values(?)";
+				
+				PreparedStatement pre = conn.prepareStatement(query);
+				pre.setInt(1, x);
+				
+				
+				pre.executeUpdate();
 				System.out.print("Connected");
-				String query = "Insert into Amar (rollno) values(x)";
-				boolean bl = st.execute(query);
-				System.out.print(bl);
 				conn.close();
 			}
 			catch(Exception e)
