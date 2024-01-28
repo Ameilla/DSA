@@ -1,11 +1,8 @@
 package DynamicProgramming;
 import java.util.*;
-
 public class Fractional_Knapsack_Problem {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
 		int capacity = 100;
 		int n = 5;
 		float totalprofit = 0.0f;
@@ -36,14 +33,11 @@ public class Fractional_Knapsack_Problem {
 				}
 			}
 		}
-		
-		
 		float[] r = new float[n];
 		Arrays.fill(r, 0.0f);
 		System.out.println(Arrays.toString(ratio));
 		System.out.println(Arrays.toString(profit));
 		System.out.println(Arrays.toString(weight));
-		
 		int i=0;
 		for(i=0;i<n;i++)
 		{
@@ -62,7 +56,6 @@ public class Fractional_Knapsack_Problem {
 		totalprofit+=r[i]*(float)profit[i];
 		System.out.println(Arrays.toString(r));
 		System.out.print(totalprofit);
-		
 
 	}
 
