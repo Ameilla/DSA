@@ -1,46 +1,39 @@
-import java.io.*;
-import java.util.*; 
-public class trash {
+import java.util.*;
 
-    public static void main (String[] args) {
-        Scanner s=new Scanner(System.in);
-        String str=s.next();
-        int n=str.length();
-        int i;
-        StringBuilder a=new StringBuilder(str);
-        a.setLength(1);
-        int q=n/16;
-        int r=n%16;
-        if(r<10)
-        {
-        	a.append(String.valueOf(r));
+public class trash {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String str = "aaaaaaaa";
+        char[] ch = str.toCharArray();
+        int n = str.length();
+        StringBuilder a = new StringBuilder();
+        HashSet<Character> t = new HashSet<>();
+        for(char c:ch)
+        	t.add(c);
+        
+
+        int r = n % 16;
+        if (n < 16) {
+        	for (char c : t) {
+                a.append(c);
+            }
+            if (r >= 10 && r <= 15) {
+                a.append((char) ('a' + r - 10));
+            } else {
+                a.append(r);
+            }
+        } else {
+            a.append(Integer.toHexString(n));
         }
-        else if(r==10)
-        {
-        	a.append("a");
-        }
-        else if(r==11)
-        {
-        	a.append("b");
-        }
-        else if(r==12)
-        {
-        	a.append("c");
-        }
-        else if(r==13)
-        {
-        	a.append("d");
-        }
-        else if(r==14)
-        {
-        	a.append("e");
-        }
-        else if(r==15)
-        {
-        	a.append("5");
-        }
-        System.out.print(a.reverse().toString());
+//        System.out.println(a.reverse().toString());
         
         
+        
+        String s1="HelloWorld";
+        String s2="Hello";
+        String s3="World";
+        String s4=s2+s3;
+        System.out.print(s4);
+        System.out.print(s1.equals(s4));
     }
 }
