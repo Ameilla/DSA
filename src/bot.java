@@ -69,7 +69,8 @@ public class bot {
 				map.put(a[i],1);
 			}
 		}
-		for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+		for(HashMap.Entry<Integer, Integer> entry : map.entrySet()) 
+		{
 		    System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
 		}
 		
