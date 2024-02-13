@@ -73,6 +73,7 @@ public class bot {
 		{
 		    System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
 		}
+		map.forEach((key, value) -> System.out.println("Key: " + key + ", Value: " + value));
 		
 
 	}
