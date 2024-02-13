@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.util.*;
 
 public class bot {
 
@@ -42,7 +42,36 @@ public class bot {
 				System.out.println(i+" = "+t[i]);
 			}
 		}
-		
+//		int[] a = {1,2,1,2,2,2,3,3,3,4,5};
+//		HashMap<Integer,Integer> map = new HashMap<>();
+//		for(int i=1;i<a.length;i++)
+//		{
+//			if(map.containsKey(a[i]))
+//			{
+//				map.put(a[i], map.get(a[i])+1);
+//			}
+//			else
+//			{
+//				map.put(a[i],1);
+//			}
+//		}	
+		HashMap<Integer,Integer> map = new HashMap<>();
+//		int[] a = {1,2,1,2,2,2,3,3,3,4,5};
+		for(int i=0;i<a.length;i++)
+		{
+			if(map.containsKey(a[i]))
+			{
+				map.put(a[i], map.get(a[i])+1);
+				
+			}
+			else
+			{
+				map.put(a[i],1);
+			}
+		}
+		for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+		    System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+		}
 		
 
 	}
