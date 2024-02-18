@@ -24,7 +24,5 @@ public class Freq_Sort_Character {
 		String word = "amarm";
 		System.out.print(freqSort(word));
 //		System.out.print("Ame");
-
 	}
-
 }
