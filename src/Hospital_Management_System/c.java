@@ -25,6 +25,9 @@ public class c {
 		}
 	}
 	public void createTable()
+	{
+		
+	}
 	public static void main(String[] args) throws Exception
 	{
 		c obj = new c();
