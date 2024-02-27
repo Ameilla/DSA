@@ -1,38 +1,45 @@
 
 import java.util.*;
 public class SahBot {
-	public static int find(int a[])
+	public static String ans(String s)
 	{
-		ArrayList<Integer> pos = new ArrayList<>();
-		ArrayList<Integer> neg = new ArrayList<>();
-		for(int i=0;i<a.length;i++)
+		int c=0;
+		StringBuilder str = new StringBuilder();
+		c=1;
+		for(int i=0;i<s.length()-1;i++)
 		{
-			if(i%2==0)
-				pos.add(a[i]);
+			if(s.charAt(i)==s.charAt(i+1))
+			{
+				c++;
+			}
 			else
-				neg.add(a[i]);
+			{
+				str.append(s.charAt(i));
+				str.append(c);
+				c=1;
+			}
 		}
-		Collections.sort(pos);
-		Collections.sort(neg);
-		return pos.get(pos.size()-2)+neg.get(1);
-		
+		 str.append(s.charAt(s.length() - 1));
+		 str.append(c);
+		return str.toString();
 	}
     public static void main(String[] args) {
-//        String[] a = {"Apple", "Amar", "Banana"};
-//        for (int i = 0; i < a.length; i++) {
-//            for (int j = i + 1; j < a.length; j++) {
-//                if (a[i].compareTo(a[j]) > 0) {
-//                    String temp = a[i];
-//                    a[i] = a[j];
-//                    a[j] = temp;
-//                }
-//            }
-//        }
-//        for (String s : a) {
-//            System.out.println(s);
-//        }
-    	int a[] = {3,2,1,7,5,4};
-    	System.out.print(find(a));
+    	System.out.print(ans("aaaabba"));
+////        String[] a = {"Apple", "Amar", "Banana"};
+////        for (int i = 0; i < a.length; i++) {
+////            for (int j = i + 1; j < a.length; j++) {
+////                if (a[i].compareTo(a[j]) > 0) {
+////                    String temp = a[i];
+////                    a[i] = a[j];
+////                    a[j] = temp;
+////                }
+////            }
+////        }
+////        for (String s : a) {
+////            System.out.println(s);
+////        }
+//    	int a[] = {3,2,1,7,5,4};
+////    	System.out.print(find(a));
     	
     }
 }
