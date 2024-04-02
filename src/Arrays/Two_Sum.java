@@ -10,7 +10,7 @@ public class Two_Sum {
 		{
 			diff = target - nums[i];
 			if(map.containsKey(diff)) {
-				return new int[] {map.get(diff),i};
+				return new int[] {map.get(diff),i,10};
 			}
 			map.put(nums[i],i);
 		}
@@ -19,11 +19,11 @@ public class Two_Sum {
 	}
 	public static void main(String[] args)
 	{
-		int nums[] = new int[] {2,7,4,5};
+		int nums[] = new int[] {1,5,2,7};
 		int target = 9;
 		int a[] = twosum(nums,target);
 		if(a!=null)
-			System.out.print(a[0]+"  "+a[1]);
+			System.out.print(a[0]+"  "+a[1]+" "+a[2]);
 		
 	}
 
