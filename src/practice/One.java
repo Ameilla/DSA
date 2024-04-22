@@ -1,18 +1,34 @@
 package practice;
 
+
+
 public class One {
 	
+	public void pattern(int n)
+	{
+		for(int i=n;i>=0;i--)
+		{
+			for(int sp=0;sp<n-i;sp++)
+			{
+				System.out.print(" ");
+			}
+			for(int j=0;j<i;j++)
+			{
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+		for(int i=2;i<=n;i++)
+		{
+			for(int sp=0;sp<n-i;sp++)
+				System.out.print(" ");
+			for(int j=0;j<i;j++)
+				System.out.print("* ");
+			System.out.println();
+		}
+	}
     public static void main(String[] args) {
-        int n = 123;
-        String str = Integer.toString(n);
-        for(int i=0;i<str.length();i++)
-        {
-        	System.out.print(str.charAt(i));
-        }
-        for (int i = 0; i < str.length(); i++) {
-            int t = (int) str.charAt(i);
-            char ch = (char)(66 - t);
-            System.out.print(ch);
-        }
+        One obj = new One();
+        obj.pattern(5);
     }
 }
