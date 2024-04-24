@@ -2,6 +2,22 @@ package practice;
 
 import java.util.*;
 public class bot {
+	String name;
+	bot()
+	{
+		
+	}
+	bot(String name)
+	{
+		this.name = name;
+	}
+	void getname()
+	{
+		System.out.print(name);
+	}
+	static {
+		System.out.print("hello");
+	}
 	public static void main(String[] args)
 	{
 		String str = new String("13579");
@@ -25,5 +41,12 @@ public class bot {
 			}
 		}
 		System.out.print(Arrays.toString(c));
+		
+		bot b1 = new bot("Amar");
+		new bot().getname();
+		b1.getname();
+		
+		
+		
 	}
 }
